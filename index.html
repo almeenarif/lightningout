@@ -1,0 +1,29 @@
+<html>
+
+<script src="almeenarif-dev-ed.my.salesforce.com/lightning/lightning.out.js"> </script>
+<div my-lightning-out="true"> </div>
+
+<script>
+  const appname = "c:MyLightningOutApp";
+  const compname = "c:Accordion";
+  const lightningendpoint = "https://almeenarif-dev-ed.my.site.com";
+  const targetelement = document.querySelector ("[my-lightning-out]");
+  const compattr = {};
+
+  $Lightning.use
+  (
+    appname,
+    function () 
+    {
+      $Lightning.createComponent 
+      (
+        compname,
+        compattr,
+        targetelement,
+
+      );
+    },
+    lightningendpoint
+  );
+
+</script>
