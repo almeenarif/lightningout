@@ -1,13 +1,16 @@
 <html>
 
 <script src="https://almeenarif-dev-ed.my.site.com/lightning/lightning.out.js"> </script>
-<div my-lightning-out="true"> </div>
+<div my-lightning-out1="true"> Placeholder for Sabre22 </div>
+<div my-lightning-out2="true"> Placeholder for AnyCalendar </div>
 
 <script>
   const appName = "c:MyLightningOutApp";
-  const compName = "c:sabre22";
+  const compName1 = "c:sabre22";
+  const compName2 = "c:AnyCalendar";
   const lightningEndPoint = "https://almeenarif-dev-ed.my.site.com";
-  const targetElement = document.querySelector ("[my-lightning-out]");
+  const targetElement1 = document.querySelector ("[my-lightning-out1]");
+  const targetElement2 = document.querySelector ("[my-lightning-out2]");
   const compAttr = {};
 
   $Lightning.use
@@ -17,9 +20,16 @@
     {
       $Lightning.createComponent 
       (
-        compName,
+        compName1,
         compAttr,
-        targetElement,
+        targetElement1,
+
+      );
+      $Lightning.createComponent 
+      (
+        compName2,
+        compAttr,
+        targetElement2,
 
       );
     },
