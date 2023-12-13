@@ -4,26 +4,26 @@
 <div my-lightning-out="true"> </div>
 
 <script>
-  const appname = "c:MyLightningOutApp";
-  const compname = "c:sabre22";
-  const lightningendpoint = "https://almeenarif-dev-ed.my.site.com";
-  const targetelement = document.querySelector ("[my-lightning-out]");
-  const compattr = {};
+  const appName = "c:MyLightningOutApp";
+  const compName = "c:sabre22";
+  const lightningEndPoint = "https://almeenarif-dev-ed.my.site.com";
+  const targetElement = document.querySelector ("[my-lightning-out]");
+  const compAttr = {};
 
   $Lightning.use
   (
-    appname,
+    appName,
     function () 
     {
       $Lightning.createComponent 
       (
-        compname,
-        compattr,
-        targetelement,
+        compName,
+        compAttr,
+        targetElement,
 
       );
     },
-    lightningendpoint
+    lightningEndPoint
   );
 
 </script>
